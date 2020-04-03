@@ -1,5 +1,5 @@
 function diffBetween(date1 , date2){ 
-    let diffYear = date2.getFullYear() - date1.getFullYear() ;
+    let diffYear = Math.abs(date2.getFullYear() - date1.getFullYear()) ;
     let diffMonth = Math.abs(date2.getMonth() - date1.getMonth()) - 1 ;
     let diffDay = Math.abs(date2.getDay() - date1.getDay()) ;
     let diffHour = date2.getHours() - date1.getHours() ;

@@ -1,8 +1,8 @@
-// function georgianToJalali( ){
-//     return (new Date().toLocaleDateString('fa-IR')) ; 
-// }
+function georgianToJalali( date){
+    return (date.toLocaleDateString('fa-IR')) ; 
+}
 
-// console.log(georgianToJalali(new Date(2020,03,02)));
+console.log(georgianToJalali(new Date(2020,01,15)));
 
 
 
