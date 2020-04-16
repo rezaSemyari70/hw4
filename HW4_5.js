@@ -3,16 +3,13 @@ function georgianToJalali( date){
 }
 
 function dateToPersian(date){
-    const month = [    '' , 'فروردین'   , 'اردیبهشت' , 'خرداد' , 
-                    'تیر' , 'مرداد'     ,'شهریور'    ,'مهر'     , 
-                    'آبان', 'آذر'       , 'دی'       , 'بهمن'  , 'اسفند'] ;
+    const month = ['','دی','بهمن','اسفند','فروردین','اردیبهشت','خرداد','تیر','مرداد','شهرویور','مهر','آبان','آذر'] ;
 
-    const day = ['یکشنبه'  ,  'دوشنبه'   ,  'سه‌شنبه' , 
-                'چهارشنبه' , 'پنج‌شنبه' , 'جمعه' , 'شنبه' ] ;
-
-    // let utcTime = date.split('/').map(item => +item);
-    let persianTime = georgianToJalali(date).split('/').map(item => +item) ;
-    return `${persianTime[0]} ${month[persianTime[1]]} ${persianTime[2]}, ${day[date.getDay()]}`
+    const day = ['','یکشنبه','دوشنبه','سه‌شنبه','چهارشنبه','پنج‌شنبه','جمعه','شنبه'] ;
+    let persianTime = georgianToJalali(date).split('/') ;
+    // return persianTime  ;
+    return `${persianTime[0]} ${day[date.getDate() ]} ${persianTime[1]} ${month[date.getMonth()]}` ;
 }
 
-console.log(dateToPersian(new Date("2020/03/02")));
+console.log(dateToPersian(new Date(2020,03,02)));
+console.log(dateToPersian(new Date(2020,04,01)));

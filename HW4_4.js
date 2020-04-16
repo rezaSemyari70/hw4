@@ -1,6 +1,6 @@
-function converTimeZone (date){
-   let difMinute = date.getTimezoneOffset();
-   return Date(date.getMinutes(date.getMinutes() - difMinute))
-}
+ function converTimeZone(date) {
+    let difMinute = date.getTimezoneOffset();
+    return Date(date.getMinutes(date.getMinutes() - difMinute))
+ }
 
-console.log(converTimeZone(new Date()));
+ console.log(converTimeZone(new Date()));

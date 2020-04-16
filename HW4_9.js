@@ -7,3 +7,5 @@ function specificRange(num){
 }
 
 console.log(specificRange(70));
+
+
